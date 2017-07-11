@@ -1,7 +1,6 @@
 package zoo_mgmt_spec;
 
-import static org.junit.Assert.*;
-import java.time.LocalDate;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;

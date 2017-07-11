@@ -1,7 +1,5 @@
 package zoo_mgmt.animals;
 
-import java.time.LocalDate;
-
 import zoo_mgmt.Animal;
 import zoo_mgmt.AnimalType;
 import zoo_mgmt.TemporalSpecialisation;
