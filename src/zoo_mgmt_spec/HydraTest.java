@@ -117,5 +117,10 @@ public class HydraTest {
   public void canRegenerateHead() {
     assertEquals(6, hydra.regenerateHead());
   }
+  
+  @Test
+  public void isVisible() {
+	  assertEquals("You can see Harold", hydra.visible());
+  }
 
 }

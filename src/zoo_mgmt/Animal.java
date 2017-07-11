@@ -1,20 +1,15 @@
 package zoo_mgmt;
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.util.*;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.time.temporal.*;
 
 public abstract class Animal implements Runnable {
   protected String name;
   private String bday;
-  //protected LocalDate age;
   protected double sizeRequirement;
   private TemporalSpecialisation tempSpec;
   protected int levelOfDanger;
@@ -28,7 +23,6 @@ public abstract class Animal implements Runnable {
 		  boolean predator, AnimalType animalType, boolean inEnclosure, int levelOfFood) {
     this.name = name;
     this.bday = bday;
-    //this.age = age;
     this.sizeRequirement = sizeRequirement;
     this.tempSpec = tempSpec;
     this.levelOfDanger = levelOfDanger;
@@ -40,6 +34,7 @@ public abstract class Animal implements Runnable {
     ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);            
     scheduler.scheduleAtFixedRate(this, 5,
                                   24*60*60, TimeUnit.SECONDS);
+    //can't really test for this, because it hardcodes a delay but what if my tests take longer than that to run? food level will be reset before getLevelOfFood is tested and produce an error.
   }
 
 
@@ -138,5 +133,22 @@ public abstract class Animal implements Runnable {
   
   public String rampage() {
 	  return "Wrahhh, I broke out and now I'm on a rampage";
+  }
+  
+  public String visible() {
+	  LocalTime morning = LocalTime.parse("05:30:00");
+	  LocalTime evening = LocalTime.parse("19:00:00");
+	  LocalTime night = LocalTime.parse("22:00:00");
+	  LocalTime now = LocalTime.now();
+	  if (now.isBefore(evening) && now.isAfter(morning) && this.tempSpec == TemporalSpecialisation.DIURNAL) {
+		  return "You can see " + this.name;
+	  }
+	  else if (now.isBefore(night) && now.isAfter(evening) && this.tempSpec == TemporalSpecialisation.CREPUSCULAR) {
+		  return "You can see " + this.name;
+	  }
+	  else if (now.isBefore(morning) && now.isAfter(night) && this.tempSpec == TemporalSpecialisation.NOCTURNAL) {
+		  return "You can see " + this.name;
+	  }
+	  else { return "Sorry this animal is not awake now"; }
   }
 }
