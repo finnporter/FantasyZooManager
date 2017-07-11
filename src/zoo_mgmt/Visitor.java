@@ -24,6 +24,7 @@ public class Visitor {
 	public int getAge() {
 		return this.age;
 	}
+
 	
 
 }
