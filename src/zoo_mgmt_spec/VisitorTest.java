@@ -9,12 +9,10 @@ import zoo_mgmt.Visitor;
 
 public class VisitorTest {
 	Visitor visitor;
-	Ticket ticket
 	
 	@Before
 	public void before() {
 		visitor = new Visitor("Hawkeye Pierce", 200, 36);
-		ticket = new Ticket(15, false);
 	}
 	
 	@Test
