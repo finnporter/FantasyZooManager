@@ -14,12 +14,12 @@ public class Niffler extends Animal {
 	}
 
 
-//GETTERS
+	//GETTERS
 	public int getNumberOfStolenItems() {
 		return this.numberOfStolenItems;
 	}
 
-//OTHER NIFFLER FUNCTIONS
+	//SPECIFIC NIFFLER FUNCTIONS
 	public int stealItems(int amount) {
 		return this.numberOfStolenItems += amount;
 	}

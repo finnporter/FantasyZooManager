@@ -12,17 +12,17 @@ public class Thestral extends Animal {
 	}
 
 
-//GETTERS
+	//GETTERS
 	public boolean getTrainedForPullingCarriage() {
 		return this.trainedForPullingCarriage;
 	}
 
-//SETTERS, of sorts
+	//SETTERS, or toggler?
 	public void toggleTrainedForPullingCarriage() {
 		this.trainedForPullingCarriage = !this.trainedForPullingCarriage;
 	}
 
-//OTHER THESTRAL FUNCITIONS
+	//SPECIFIC THESTRAL FUNCITIONS
 	public String graze() {
 		return this.name + " grazes happily.";
 	}

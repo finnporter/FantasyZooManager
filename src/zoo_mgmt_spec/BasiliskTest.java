@@ -15,8 +15,8 @@ public class BasiliskTest {
 		basilisk = new Basilisk("Maude", "1923-02-23", 20, false, true, 3);
 	}
 
-//Abstract Animal class tests are tested in Hydra.java
-//SPECIAL BASILISK TEST
+	//Abstract Animal class tests are tested in Hydra.java
+	//SPECIAL BASILISK TEST
 	@Test
 	public void howLong() {
 		assertEquals(20.0, basilisk.getLength(), 0.01);

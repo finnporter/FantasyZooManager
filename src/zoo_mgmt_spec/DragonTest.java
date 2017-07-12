@@ -19,8 +19,8 @@ public class DragonTest {
 		dragon = new Dragon("Norbert", "2015-03-14", DragonType.NORWEGIAN_RIDGEBACK, 130, true, 7);
 	}
 
-//Abstract animal class tests are tested in Hydra.java
-//SPECIAL DRAGON TESTS
+	//Abstract animal class tests are tested in Hydra.java
+	//SPECIAL DRAGON TESTS
 	@Test
 	public void hasType() {
 		assertEquals(DragonType.NORWEGIAN_RIDGEBACK, dragon.getType());
@@ -46,27 +46,28 @@ public class DragonTest {
 	public void canHoardGold() {
 		assertEquals(230, dragon.hoardGold(100));
 	}
-	
+
 	@Test
 	public void isVisible() {
 		assertEquals("You can see Norbert", dragon.visible("20:15"));
 	}
-	
+
+	//Useless Tests to get CodeCoverate to 100 %
 	@Test
-	  public void completeCodeCoverageType() {
-		  DragonType[] types = DragonType.values();
-		  DragonType type = DragonType.valueOf("HUNGARIAN_HORNTAIL");
-	  }
-	
+	public void completeCodeCoverageType() {
+		DragonType[] types = DragonType.values();
+		DragonType type = DragonType.valueOf("HUNGARIAN_HORNTAIL");
+	}
+
 	@Test
-	  public void completeCodeCoverageSpecialisation() {
-		  TemporalSpecialisation[] types = TemporalSpecialisation.values();
-		  TemporalSpecialisation type = TemporalSpecialisation.valueOf("DIURNAL");
-	  }
-	
+	public void completeCodeCoverageSpecialisation() {
+		TemporalSpecialisation[] types = TemporalSpecialisation.values();
+		TemporalSpecialisation type = TemporalSpecialisation.valueOf("DIURNAL");
+	}
+
 	@Test
-	  public void completeCodeCoverageAnimal() {
-		  AnimalType[] types = AnimalType.values();
-		  AnimalType type = AnimalType.valueOf("SWIMMABLE");
-	  }
+	public void completeCodeCoverageAnimal() {
+		AnimalType[] types = AnimalType.values();
+		AnimalType type = AnimalType.valueOf("SWIMMABLE");
+	}
 }

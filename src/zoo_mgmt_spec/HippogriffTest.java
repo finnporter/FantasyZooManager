@@ -15,8 +15,8 @@ public class HippogriffTest {
 		hippogriff = new Hippogriff("Buckbeak", "2002-07-12", "light grey", true, 2);
 	}
 
-//Abstract animal class tests are tested in Hydra.java
-//SPECIAL HIPPOGRIFF TESTS
+	//Abstract animal class tests are tested in Hydra.java
+	//SPECIAL HIPPOGRIFF TESTS
 	@Test
 	public void hasColour() {
 		assertEquals("light grey", hippogriff.getColour());

@@ -14,7 +14,7 @@ public class Basilisk extends Animal{
 	}
 
 
-//GETTERS
+	//GETTERS
 	public double getLength() {
 		return this.length;
 	}
@@ -22,7 +22,7 @@ public class Basilisk extends Animal{
 	public boolean getVenomous() {
 		return this.venomous;
 	}
-
+	//SPECIFIC BASILISK METHODS
 	public String swim() {
 		return "swoosh swoosh";
 	}

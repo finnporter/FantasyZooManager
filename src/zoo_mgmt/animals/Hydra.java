@@ -18,7 +18,7 @@ public class Hydra extends Animal{
 		this.colour = colour;
 	}
 
-//GETTERS
+	//GETTERS
 	public int getNumberOfHeads() {
 		return this.numberOfHeads;
 	}
@@ -27,7 +27,7 @@ public class Hydra extends Animal{
 		return this.colour;
 	}
 
-//OTHER METHODS
+	//SPECIFIC HYDRA METHODS
 	public String swim() {
 		return "paddle paddle";
 	}

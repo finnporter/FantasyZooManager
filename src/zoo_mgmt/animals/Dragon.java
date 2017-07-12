@@ -15,7 +15,7 @@ public class Dragon extends Animal {
 	}
 
 
-//GETTERS
+	//GETTERS
 	public DragonType getType() {
 		return this.type;
 	}
@@ -24,12 +24,12 @@ public class Dragon extends Animal {
 		return this.gold;
 	}
 
-//SETTERS
+	//SETTERS
 	public void setGold(int amount) {
 		this.gold = amount;
 	}
 
-//OTHER METHODS
+	//SPECIFIC DRAGON METHODS
 	public String fly() {
 		return "flap flap";
 	}

@@ -12,7 +12,7 @@ public class Visitor {
 		this.age = age;
 	}
 
-//GETTERS
+	//GETTERS
 	public String getName() {
 		return this.name;
 	}

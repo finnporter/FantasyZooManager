@@ -12,12 +12,12 @@ public class Hippogriff extends Animal {
 	}
 
 
-//GETTERS
+	//GETTERS
 	public String getColour() {
 		return this.colour;
 	}
 
-//OTHER FUNCTIONS
+	//SPECIFIC HIPPOGRIFF FUNCTIONS
 	public String fly() {
 		return "fwoomp fwoomp";
 	}

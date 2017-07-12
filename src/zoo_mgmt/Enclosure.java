@@ -17,7 +17,7 @@ public abstract class Enclosure {
 	}
 
 
-//GETTERS
+	//GETTERS
 	public String getName(){
 		return this.name;
 	}
@@ -34,7 +34,7 @@ public abstract class Enclosure {
 		return this.type;
 	}
 
-//ENCLOSURE FUNCTIONS
+	//ENCLOSURE FUNCTIONS
 	public int countAnimals() {
 		return this.animals.size();
 	}

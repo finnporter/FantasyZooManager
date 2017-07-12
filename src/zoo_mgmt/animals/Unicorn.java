@@ -16,7 +16,7 @@ public class Unicorn extends Animal {
 	} 
 
 
-//GETTERS
+	//GETTERS
 	public String getHairColour() {
 		return this.hairColour;
 	}
@@ -29,7 +29,7 @@ public class Unicorn extends Animal {
 		return this.hornLength;
 	}
 
-//SPECIAL UNICORN FUNCTIONS
+	//SPECIFIC UNICORN FUNCTIONS
 	public String glitter() {
 		return this.name + " glitters brighter than the sun.";
 	}

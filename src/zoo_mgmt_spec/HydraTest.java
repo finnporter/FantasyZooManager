@@ -19,7 +19,7 @@ public class HydraTest {
 		hydra2 = new Hydra("Harold2", "1913-12-13", 5, "light blue", false, 5);
 	}
 
-//Abstract Animal Tests
+	//Abstract Animal Tests
 	@Test
 	public void hasName() {
 		assertEquals("Harold", hydra.getName());
@@ -69,13 +69,13 @@ public class HydraTest {
 	public void hasLevelOfFood() {
 		assertEquals(5, hydra.getLevelOfFood());
 	}
-	
+
 	@Test
 	public void canResetLevelOfFood() {
 		hydra.resetFoodLevel();
 		assertEquals(0, hydra.getLevelOfFood());
 	}
-	
+
 	@Test
 	public void canUseRunnable() {
 		hydra.run();
@@ -111,7 +111,7 @@ public class HydraTest {
 	}
 
 
-//SPECIAL HYDRA TESTS
+	//SPECIAL HYDRA TESTS
 	@Test
 	public void howManyHeads() {
 		assertEquals(5, hydra.getNumberOfHeads());
@@ -136,10 +136,5 @@ public class HydraTest {
 	public void isVisible() {
 		assertEquals("You can see Harold", hydra.visible("14:02"));
 	}
-	
-	@Test
-	public void isNotVisible() {
-		assertEquals("Sorry, this animal is not awake now", hydra.visible("04:02"));
-	}
- 
+
 }

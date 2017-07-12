@@ -46,7 +46,7 @@ public class EnclosureTest {
 	public void canFitIntoEnclosure() {
 		assertEquals(true, forrestEnc.checkSize(unicorn));
 	}
-	
+
 	@Test
 	public void cannotFitIntoEnclosure() {
 		assertEquals(false, forrestEncsmall.checkSize(unicorn));
@@ -57,7 +57,7 @@ public class EnclosureTest {
 		forrestEnc.addAnimal(unicorn);
 		assertEquals(true, forrestEnc.checkDangerLevel(unicorn));
 	}
-	
+
 	@Test
 	public void doesNotHaveCompatibleDangerLevel() {
 		forrestEnc.addAnimal(unicorn);
@@ -69,13 +69,13 @@ public class EnclosureTest {
 		forrestEnc.addAnimal(unicorn);
 		assertEquals("Animal added.", forrestEnc.safelyAddAnimal(unicorn));
 	}
-	
+
 	@Test
 	public void cannotSafelyAddAnimalBecauseDanger() {
 		forrestEnc.addAnimal(unicorn);
 		assertEquals("Sorry, can't add animal.", forrestEnc.safelyAddAnimal(dragon));
 	}
-	
+
 	@Test
 	public void cannotSafelyAddAnimalBecauseSize() {
 		forrestEncsmall.addAnimal(unicorn);

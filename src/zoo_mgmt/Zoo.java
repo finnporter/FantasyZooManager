@@ -7,20 +7,18 @@ public class Zoo {
 	private ArrayList<Visitor> visitors;
 	private int tickets;
 	private double price;
-	private double zooCash;
 
 
-	public Zoo(String name, int tickets, double price, double zooCash) {
+	public Zoo(String name, int tickets, double price) {
 		this.name = name;
 		this.enclosures = new ArrayList<Enclosure>();
 		this.visitors = new ArrayList<Visitor>();
 		this.tickets = tickets;
 		this.price = price;
-		this.zooCash = zooCash;
 	}
 
 
-//GETTERS
+	//GETTERS
 	public String getName() {
 		return this.name;
 	}
@@ -33,11 +31,7 @@ public class Zoo {
 		return this.price;
 	}
 
-	public double getZooCash() {
-		return this.zooCash;
-	}
-
-//OTHER ZOO FUNCTIONS
+	//OTHER ZOO FUNCTIONS
 	public int enclosureCount() {
 		return this.enclosures.size();
 	}
