@@ -10,6 +10,7 @@ public class ForrestEnc extends Enclosure {
     super(name, functional, size, EncType.FORREST);
   }
   
+//OTHER FORREST ENCLOSURE FUNCTIONS    
   public void addAnimal(Animal newAnimal) {
 	   if(newAnimal.getAnimalType() == AnimalType.GENERIC){
 	      animals.add(newAnimal); 
@@ -19,5 +20,4 @@ public class ForrestEnc extends Enclosure {
 	  public void removeAnimal(Animal animal) {
 		    animals.remove(animal);
 		  }
-
 }

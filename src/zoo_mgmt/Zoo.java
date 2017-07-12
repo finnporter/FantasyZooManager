@@ -20,7 +20,7 @@ public class Zoo {
 	}
 
 
-	//GETTERS
+//GETTERS
 	public String getName() {
 		return this.name;
 	}
@@ -37,8 +37,7 @@ public class Zoo {
 		return this.zooCash;
 	}
 
-	//OTHER ZOO FUNCTIONS
-
+//OTHER ZOO FUNCTIONS
 	public int enclosureCount() {
 		return this.enclosures.size();
 	}
@@ -74,7 +73,4 @@ public class Zoo {
 			return result;
 		}
 	}
-
-
-
 }

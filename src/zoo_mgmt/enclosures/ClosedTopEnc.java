@@ -6,18 +6,20 @@ import zoo_mgmt.Enclosure;
 
 public class ClosedTopEnc extends Enclosure {
 
-  public ClosedTopEnc(String name, boolean functional, double size) {
-    super(name, functional, size, EncType.CLOSED_TOP);
-  }
+	public ClosedTopEnc(String name, boolean functional, double size) {
+		super(name, functional, size, EncType.CLOSED_TOP);
+	}
 
-  public void addAnimal(Animal newAnimal) {
-   if(newAnimal.getAnimalType() == AnimalType.FLYABLE){
-      animals.add(newAnimal); 
-   }
-  }	
-  
-  public void removeAnimal(Animal animal) {
-	    animals.remove(animal);
-	  }
 
+	@Override
+	public void addAnimal(Animal newAnimal) {
+		if(newAnimal.getAnimalType() == AnimalType.FLYABLE){
+			animals.add(newAnimal); 
+		}
+	}	
+
+	@Override
+	public void removeAnimal(Animal animal) {
+		animals.remove(animal);
+	}
 }
