@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import zoo_mgmt.DragonType;
+import zoo_mgmt.EncType;
 import zoo_mgmt.animals.Dragon;
 import zoo_mgmt.animals.Hydra;
 import zoo_mgmt.enclosures.MediterranianEnc;
@@ -35,6 +36,11 @@ public class MediterranianEncTest {
   @Test
   public void hasSize() {
     assertEquals(12000, medEnc.getSize(), 0.01);
+  }
+  
+  @Test
+  public void hasType() {
+	  assertEquals(EncType.AQUARIUM, medEnc.getType());
   }
 
   @Test

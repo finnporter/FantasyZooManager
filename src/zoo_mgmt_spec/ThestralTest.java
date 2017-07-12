@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import zoo_mgmt.TemporalSpecialisation;
 import zoo_mgmt.animals.Thestral;
 
 public class ThestralTest {

@@ -135,6 +135,6 @@ public abstract class Animal implements Runnable {
 		else if (time.isBefore(morning) && time.isAfter(night) && this.tempSpec == TemporalSpecialisation.NOCTURNAL) {
 			return "You can see " + this.name;
 		}
-		else { return "Sorry this animal is not awake now"; }
+		else { return "Sorry, this animal is not awake now"; }
 	}
 }

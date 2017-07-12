@@ -130,5 +130,10 @@ public class HydraTest {
 	public void isVisible() {
 		assertEquals("You can see Harold", hydra.visible("14:02"));
 	}
+	
+	@Test
+	public void isNotVisible() {
+		assertEquals("Sorry, this animal is not awake now", hydra.visible("04:02"));
+	}
  
 }
