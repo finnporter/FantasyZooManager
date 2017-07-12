@@ -23,7 +23,7 @@ public abstract class Animal implements Runnable {
 			boolean predator, AnimalType animalType, boolean inEnclosure, int levelOfFood) {
 		this.name = name;
 		this.bday = bday;
-		this.sizeRequirement = sizeRequirement;
+		this.sizeRequirement = sizeRequirement; 
 		this.tempSpec = tempSpec;
 		this.levelOfDanger = levelOfDanger;
 		this.predator = predator;

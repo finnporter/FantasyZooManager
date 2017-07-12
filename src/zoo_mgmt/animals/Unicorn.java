@@ -13,7 +13,7 @@ public class Unicorn extends Animal {
 		this.hairColour = hairColour;
 		this.glamFactor = glamFactor;
 		this.hornLength = hornLength;
-	}
+	} 
 
 
 //GETTERS

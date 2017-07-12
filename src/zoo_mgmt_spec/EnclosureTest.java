@@ -10,11 +10,13 @@ import zoo_mgmt.enclosures.ForrestEnc;
 
 public class EnclosureTest {
 	ForrestEnc forrestEnc;
+	ForrestEnc forrestEncsmall;
 	Unicorn unicorn;
 
 	@Before
 	public void before() {
 		forrestEnc = new ForrestEnc("Forbidden Forrest", true, 50000);
+		forrestEncsmall = new ForrestEnc("Small Forbidden Forrest", true, 2);
 		unicorn = new Unicorn("Sparkles", "1999-10-10", "purple", 8, 35, true, 6);
 	}
 
@@ -39,6 +41,11 @@ public class EnclosureTest {
 	@Test
 	public void canFitIntoEnclosure() {
 		assertEquals(true, forrestEnc.checkSize(unicorn));
+	}
+	
+	@Test
+	public void cannotFitIntoEnclosure() {
+		assertEquals(false, forrestEncsmall.checkSize(unicorn));
 	}
 
 	@Test
