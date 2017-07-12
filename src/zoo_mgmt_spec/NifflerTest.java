@@ -33,6 +33,11 @@ public class NifflerTest {
     public void canFindTreasure() {
       assertEquals(130, niffler.findTreasure(10, new Random(3)));
     }
+    
+    @Test
+    public void cannotFindTreasure() {
+      assertEquals(120, niffler.findTreasure(10, new Random(1000000000)));
+    }
 
      @Test
      public void canDig() {

@@ -1,7 +1,10 @@
 package zoo_mgmt.animals;
 
+import org.junit.Test;
+
 import zoo_mgmt.Animal;
 import zoo_mgmt.AnimalType;
+import zoo_mgmt.EncType;
 import zoo_mgmt.TemporalSpecialisation;
 
 public class Hydra extends Animal{

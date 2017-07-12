@@ -5,7 +5,10 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import zoo_mgmt.AnimalType;
 import zoo_mgmt.DragonType;
+import zoo_mgmt.EncType;
+import zoo_mgmt.TemporalSpecialisation;
 import zoo_mgmt.animals.Dragon;
 
 public class DragonTest {
@@ -48,4 +51,22 @@ public class DragonTest {
 	public void isVisible() {
 		assertEquals("You can see Norbert", dragon.visible("20:15"));
 	}
+	
+	@Test
+	  public void completeCodeCoverageType() {
+		  DragonType[] types = DragonType.values();
+		  DragonType type = DragonType.valueOf("HUNGARIAN_HORNTAIL");
+	  }
+	
+	@Test
+	  public void completeCodeCoverageSpecialisation() {
+		  TemporalSpecialisation[] types = TemporalSpecialisation.values();
+		  TemporalSpecialisation type = TemporalSpecialisation.valueOf("DIURNAL");
+	  }
+	
+	@Test
+	  public void completeCodeCoverageAnimal() {
+		  AnimalType[] types = AnimalType.values();
+		  AnimalType type = AnimalType.valueOf("SWIMMABLE");
+	  }
 }

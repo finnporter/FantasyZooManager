@@ -24,7 +24,7 @@ public class MediterranianEncTest {
   }
 
   @Test
-  public void hasName() {
+  public void hasName() {	  
     assertEquals("Club Med", medEnc.getName());
   }
 
@@ -60,5 +60,11 @@ public class MediterranianEncTest {
     medEnc.addAnimal(hydra);
     medEnc.removeAnimal(hydra);
     assertEquals(0, medEnc.countAnimals());
+  }
+  
+  @Test
+  public void completeCodeCoverage() {
+	  EncType[] types = EncType.values();
+	  EncType type = EncType.valueOf("DESERT");
   }
 }
