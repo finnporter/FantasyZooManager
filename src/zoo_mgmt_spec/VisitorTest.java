@@ -1,18 +1,18 @@
 package zoo_mgmt_spec;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import zoo_mgmt.Ticket;
-import zoo_mgmt.Visitor;
+import zoo_mgmt.*;
 
 public class VisitorTest {
 	Visitor visitor;
 	
 	@Before
 	public void before() {
-		visitor = new Visitor("Hawkeye Pierce", 200, 36);
+		visitor = new Visitor("Hawkeye Pierce", 200.0, 36);
 	}
 	
 	@Test
@@ -22,7 +22,7 @@ public class VisitorTest {
 	
 	@Test
 	public void hasCash() {
-		assertEquals(200, visitor.getCash(), 0.01);
+		assertEquals(200.0, visitor.getCash(), 0.01);
 	}
 	
 	@Test

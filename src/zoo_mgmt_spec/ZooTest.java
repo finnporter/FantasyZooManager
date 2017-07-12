@@ -11,13 +11,15 @@ import zoo_mgmt.enclosures.*;
 public class ZooTest {
   Zoo zoo;
   ForrestEnc forrestEnc;
-  Visitor visitor;
+  Visitor visitor1;
+  Visitor visitor2;
 
   @Before
   public void before() {
-    zoo = new Zoo("Finn's Fantastical Fauna", 100, 0.5, 15.0, 2000.0);
+    zoo = new Zoo("Finn's Fantastical Fauna", 100, 15.0, 2000.0);
     forrestEnc = new ForrestEnc("Forbidden Forrest", true, 50000);
-    visitor = new Visitor("Hawkeye Pierce", 200, 36);	
+    visitor1 = new Visitor("Hawkeye Pierce", 200.0, 36);	
+    visitor2 = new Visitor("BJ Honeycutt", 150.0, 4);
   }
 
   @Test
@@ -31,18 +33,13 @@ public class ZooTest {
   }
   
   @Test
-  public void hasConcession() {
-	  assertEquals(0.5, zoo.getConcession(), 0.01);
-  }
-  
-  @Test
   public void hasPrice() {
 	  assertEquals(15.0, zoo.getPrice(), 0.01);
   }
   
   @Test
-  public void hasCash() {
-	  assertEquals(2000.0, zoo.getCash(), 0.01);
+  public void hasZooCash() {
+	  assertEquals(2000.0, zoo.getZooCash(), 0.01);
   }
 
   @Test
@@ -70,15 +67,25 @@ public class ZooTest {
   
   @Test
   public void canAddVisitors() {
-	  zoo.addVisitor(visitor);
+	  zoo.addVisitor(visitor1);
 	  assertEquals(1, zoo.visitorCount());
   }
   
   @Test
   public void canRemoveVisitors() {
-	  zoo.addVisitor(visitor);
-	  zoo.removeVisitor(visitor);
+	  zoo.addVisitor(visitor1);
+	  zoo.removeVisitor(visitor1);
 	  assertEquals(0, zoo.visitorCount());
+  }
+  
+  @Test
+  public void canBuyTicket() {
+	  assertEquals(185.0, zoo.buyTicket(visitor1), 0.01);
+  }
+  
+  @Test
+  public void canBuyConcessionTicket() {
+	  assertEquals(138.75, zoo.buyTicket(visitor2), 0.01);
   }
 
 }
