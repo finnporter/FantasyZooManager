@@ -14,12 +14,12 @@ public class ClosedTopEnc extends Enclosure {
 	@Override
 	public void addAnimal(Animal newAnimal) {
 		if(newAnimal.getAnimalType() == AnimalType.FLYABLE){
-			animals.add(newAnimal); 
+			super.addAnimal(newAnimal);
 		}
 	}	
 
 	@Override
 	public void removeAnimal(Animal animal) {
-		animals.remove(animal);
+		super.removeAnimal(animal);
 	}
 }

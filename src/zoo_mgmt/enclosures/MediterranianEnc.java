@@ -11,11 +11,11 @@ public class MediterranianEnc extends Enclosure {
 //OTHER MEDITERRANIAN ENCLOSURE FUNCTIONS
 	public void addAnimal(Animal newAnimal) {
 		if(newAnimal.getAnimalType() == AnimalType.SWIMMABLE){
-			animals.add(newAnimal); 
+			super.addAnimal(newAnimal);
 		}
 	}
 
 	public void removeAnimal(Animal animal) {
-		animals.remove(animal);
+		super.removeAnimal(animal);
 	}
 }

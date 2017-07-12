@@ -49,7 +49,6 @@ public abstract class Enclosure {
 	}
 
 	public boolean checkSize(Animal animal) {
-		//checks if the animal fits into the intended enclosure
 		if (animal.sizeRequirement <= this.size) {
 			return true;
 		}
@@ -59,7 +58,6 @@ public abstract class Enclosure {
 	}
 
 	public boolean checkDangerLevel(Animal newAnimal) {
-		//checks for existing animals and compatible danger levels
 		for (Animal animal : animals) {
 			if (newAnimal.levelOfDanger == animal.levelOfDanger) {
 			}
