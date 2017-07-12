@@ -75,6 +75,12 @@ public class HydraTest {
 		hydra.resetFoodLevel();
 		assertEquals(0, hydra.getLevelOfFood());
 	}
+	
+	@Test
+	public void canUseRunnable() {
+		hydra.run();
+		assertEquals(0, hydra.getLevelOfFood());
+	}
 
 	@Test
 	public void canEat() {
