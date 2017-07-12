@@ -32,8 +32,7 @@ public abstract class Animal implements Runnable {
 		this.levelOfFood = levelOfFood;
 
 		ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);            
-		scheduler.scheduleAtFixedRate(this, 5,
-				24*60*60, TimeUnit.SECONDS);
+		scheduler.scheduleAtFixedRate(this, 5, 24*60*60, TimeUnit.SECONDS);
 	}
 
 
@@ -121,18 +120,19 @@ public abstract class Animal implements Runnable {
 		return "Wrahhh, I broke out and now I'm on a rampage";
 	}
 
-	public String visible() {
+	public String visible(String currentTime) {
 		LocalTime morning = LocalTime.parse("05:30:00");
 		LocalTime evening = LocalTime.parse("19:00:00");
-		LocalTime night = LocalTime.parse("22:00:00");
-		LocalTime now = LocalTime.now();
-		if (now.isBefore(evening) && now.isAfter(morning) && this.tempSpec == TemporalSpecialisation.DIURNAL) {
+		LocalTime QuasiMidnight = LocalTime.parse("23:59:59");
+		LocalTime night = LocalTime.parse("00:00:00");
+		LocalTime time = LocalTime.parse(currentTime);
+		if (time.isBefore(evening) && time.isAfter(morning) && this.tempSpec == TemporalSpecialisation.DIURNAL) {
 			return "You can see " + this.name;
 		}
-		else if (now.isBefore(night) && now.isAfter(evening) && this.tempSpec == TemporalSpecialisation.CREPUSCULAR) {
+		else if (time.isBefore(QuasiMidnight) && time.isAfter(evening) && this.tempSpec == TemporalSpecialisation.CREPUSCULAR) {
 			return "You can see " + this.name;
 		}
-		else if (now.isBefore(morning) && now.isAfter(night) && this.tempSpec == TemporalSpecialisation.NOCTURNAL) {
+		else if (time.isBefore(morning) && time.isAfter(night) && this.tempSpec == TemporalSpecialisation.NOCTURNAL) {
 			return "You can see " + this.name;
 		}
 		else { return "Sorry this animal is not awake now"; }

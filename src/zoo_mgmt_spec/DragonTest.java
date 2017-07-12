@@ -43,4 +43,9 @@ public class DragonTest {
 	public void canHoardGold() {
 		assertEquals(230, dragon.hoardGold(100));
 	}
+	
+	@Test
+	public void isVisible() {
+		assertEquals("You can see Norbert", dragon.visible("20:15"));
+	}
 }

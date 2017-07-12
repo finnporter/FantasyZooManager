@@ -11,10 +11,12 @@ import zoo_mgmt.animals.Hydra;
 
 public class HydraTest {
 	Hydra hydra;
+	Hydra hydra2;
 
 	@Before
 	public void before() {
 		hydra = new Hydra("Harold", "1913-12-13", 5, "light blue", true, 5);
+		hydra2 = new Hydra("Harold2", "1913-12-13", 5, "light blue", false, 5);
 	}
 
 //Abstract Animal Tests
@@ -41,7 +43,7 @@ public class HydraTest {
 	@Test
 	public void hasTemporalSpecialisation() {
 		assertEquals(TemporalSpecialisation.DIURNAL, hydra.getTempSpec());
-	}
+	} 
 
 	@Test
 	public void hasLevelOfDanger() {
@@ -67,6 +69,12 @@ public class HydraTest {
 	public void hasLevelOfFood() {
 		assertEquals(5, hydra.getLevelOfFood());
 	}
+	
+	@Test
+	public void canResetLevelOfFood() {
+		hydra.resetFoodLevel();
+		assertEquals(0, hydra.getLevelOfFood());
+	}
 
 	@Test
 	public void canEat() {
@@ -89,9 +97,11 @@ public class HydraTest {
 	}
 
 	@Test
-	public void canInEnclosureStatus() {
+	public void canToggleInEnclosureStatus() {
 		hydra.toggleInEnclosureStatus();
+		hydra2.toggleInEnclosureStatus();
 		assertEquals(false, hydra.getInEnclosureStatus());
+		assertEquals(true, hydra2.getInEnclosureStatus());
 	}
 
 
@@ -118,7 +128,7 @@ public class HydraTest {
 
 	@Test
 	public void isVisible() {
-		assertEquals("You can see Harold", hydra.visible());
+		assertEquals("You can see Harold", hydra.visible("14:02"));
 	}
-
+ 
 }

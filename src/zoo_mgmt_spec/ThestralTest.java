@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import zoo_mgmt.TemporalSpecialisation;
 import zoo_mgmt.animals.Thestral;
 
 public class ThestralTest {
@@ -16,7 +17,8 @@ public class ThestralTest {
   }
 
 //Generic Animal Tests are tested in Hydra.java
-//Special Thestral Tests
+//SPECIAL THESTRAL TESTS
+ 
     @Test
     public void isTrainedForPullingCarriage() {
       assertEquals(true, thestral.getTrainedForPullingCarriage());
@@ -37,4 +39,9 @@ public class ThestralTest {
     public void canPullCarriage() {
       assertEquals("Pontius is ready to pull this carriage.", thestral.pullCarriage());
     }
+    
+    @Test
+	public void isVisible() {
+		assertEquals("You can see Pontius", thestral.visible("01:45"));
+	}
 }
