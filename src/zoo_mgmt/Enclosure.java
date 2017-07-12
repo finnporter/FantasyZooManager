@@ -52,17 +52,13 @@ public abstract class Enclosure {
 		if (animal.sizeRequirement <= this.size) {
 			return true;
 		}
-		else {
-			return false;
-		}
+		else { return false; }
 	}
 
 	public boolean checkDangerLevel(Animal newAnimal) {
 		for (Animal animal : animals) {
-			if (newAnimal.levelOfDanger == animal.levelOfDanger) {
-			}
-			else
-				return false;
+			if (newAnimal.levelOfDanger == animal.levelOfDanger) { }
+			else { return false; }
 		}
 		return true;
 	}
@@ -72,9 +68,6 @@ public abstract class Enclosure {
 			addAnimal(newAnimal);
 			return "Animal added.";
 		}
-		else
-			return "Sorry, can't add animal.";
+		else {return "Sorry, can't add animal."; }
 	}
-
-
 }

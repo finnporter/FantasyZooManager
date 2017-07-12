@@ -58,8 +58,7 @@ public class Zoo {
 
 	public double buyTicket(Visitor visitor) {
 		if (visitor.getAge() <= 10 || visitor.getAge() >= 65) {
-			double amount = this.price * 0.75;
-			double newPrice = visitor.getCash() - amount;
+			double newPrice = visitor.getCash() - (this.price * 0.75);
 			return newPrice;
 		}
 		else {
